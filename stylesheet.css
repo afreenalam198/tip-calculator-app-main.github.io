@@ -64,7 +64,7 @@ body {
   text-align: right;
   padding-right: 0.75rem;
   margin: 0.1rem 0;
-  width: 18rem; 
+  width: 19rem; 
   height: 2rem;
   font-size: 24px;
   border: none;
@@ -115,7 +115,7 @@ input[type=number] {
   justify-content: space-between;
 }
 
-.form-control-btn {
+.form-control-btn, .form-control-custom-btn {
   width: 5.6rem;
   height: 2.4rem;
   font-size: 18px;
@@ -130,27 +130,17 @@ input[type=number] {
   cursor: pointer;
 }
 
-.form-control-btn:hover {
-  background-color: hsl(172, 67%, 80%);
-  color: var(--secondary-color);
-}
-
-.form-control-btn:focus {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-#tip-option5 {
+.form-control-custom-btn {
   background-color: var(--input-box-color);
   color: var(--secondary-color);
 }
 
-#tip-option5::placeholder {
+.form-control-custom-btn::placeholder {
   color: var(--input-label-color);
   letter-spacing: -0.05rem;
 }
 
-#tip-option5:focus {
+.form-control-custom-btn:focus {
   border: 2px solid var(--primary-color);
   outline: none;
   text-align: right;
@@ -196,7 +186,7 @@ input[type=number] {
   line-height: 1.8rem;
 }
 
-#reset-btn {
+.reset-btn {
   width: 16rem;
   height: 2.4rem;
   margin: 5.5rem 2rem 0 2rem; 
@@ -211,13 +201,13 @@ input[type=number] {
   padding-top: 0.1rem;
 }
 
-#reset-btn:hover {
-  background-color: hsl(172, 67%, 80%);
+.selected {
+  background-color: var(--primary-color);
   color: var(--secondary-color);
 }
 
-#reset-btn:focus {
-  background-color: var(--primary-color);
+.hover-effect:hover {
+  background-color: hsl(172, 67%, 80%);
   color: var(--secondary-color);
 }
 
@@ -250,7 +240,7 @@ a {
     width: 14rem;
   }
 
-  #reset-btn {
+  .reset-btn {
     width: 12rem;
   }
 
@@ -279,7 +269,7 @@ a {
     width: 10.4rem;
   }
 
-  .form-control-btn {
+  .form-control-btn, .form-control-custom-btn {
     width: 4.8rem;
   }
 
@@ -291,7 +281,7 @@ a {
     font-size: 30px;
   }
 
-  #reset-btn {
+  .reset-btn {
     width: 11.5rem;
     margin: 5.5rem 1rem 0 1rem; 
   }
@@ -338,7 +328,7 @@ a {
     top: 1rem;
   }
 
-  .form-control-btn {
+  .form-control-btn, .form-control-custom-btn {
     width: 9rem;
     height: 3rem;
     font-size: 24px;
@@ -352,7 +342,7 @@ a {
     font-size: 30px;
   }
 
-  #reset-btn {
+  .reset-btn {
     width: 18rem;
     margin: 3rem 1.4rem 2rem 1.4rem; 
   }
