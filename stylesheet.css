@@ -18,7 +18,7 @@
 }
 
 body {
-    font-size: 12px; 
+    font-size: 18px; 
     text-align: center;
     background-color: var(--bg-color);
 }
@@ -27,27 +27,34 @@ body {
   margin-top: 6rem;
 }
 
+/*For screen readers only*/
+h1 {
+  position: absolute;
+  left: -10000px;
+  overflow: hidden;
+}
+
 .container {
-  width: 44rem;
-  height: 22rem;
+  width: 60rem;
+  height: 30rem;
   background-color: var(--white);
-  margin: 4rem auto;
+  margin: 3rem auto;
   border-radius: 15px;
   display: flex;
   justify-content: space-around;
 }
 
 .input-container {
+  width: 26rem;
   text-align: left;
-  margin: 2rem;
-  width: 22rem;
+  margin: 2.5rem;
 }
 
 .output-container {
+  width: 27rem;
   background-color: var(--secondary-color);
   text-align: left;
-  width: 20rem;
-  margin: 1.4rem 1.4rem 1.4rem 0;
+  margin: 2rem 2rem 2rem 0;
   border-radius: 10px;
 }
 
@@ -64,8 +71,8 @@ body {
   text-align: right;
   padding-right: 0.75rem;
   margin: 0.1rem 0;
-  width: 19rem; 
-  height: 2rem;
+  width: 26rem; 
+  height: 3rem;
   font-size: 24px;
   border: none;
   border-radius: 5px;
@@ -87,7 +94,11 @@ body {
   position: absolute;
   left: 0.75rem;
   pointer-events: none;
-  top: 0.6rem;  
+  top: 1.2rem;  
+}
+
+fieldset {
+  border: none;
 }
 
 .input-label {
@@ -116,9 +127,9 @@ input[type=number] {
 }
 
 .form-control-btn, .form-control-custom-btn {
-  width: 5.6rem;
-  height: 2.4rem;
-  font-size: 18px;
+  width: 7.5rem;
+  height: 3rem;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
   margin-top: 0.75rem;
@@ -161,7 +172,7 @@ input[type=number] {
 .amount-output-section {
   display: flex;
   justify-content: space-between;
-  padding: 2.5rem 2rem 0 2rem;
+  padding: 3.5rem 2.5rem 0 2.5rem;
 }
 
 .output-label {
@@ -180,16 +191,16 @@ input[type=number] {
 }
 
 .output-amount {
-  font-size: 34px;
+  font-size: 50px;
   font-weight: 700;
   color: var(--primary-color);
-  line-height: 1.8rem;
+  line-height: 3.2rem;
 }
 
 .reset-btn {
-  width: 16rem;
-  height: 2.4rem;
-  margin: 5.5rem 2rem 0 2rem; 
+  width: 22rem;
+  height: 3rem;
+  margin: 6.5rem 2.5rem 0 2.5rem; 
   border-radius: 5px;
   outline: none;
   border: none;
@@ -219,74 +230,120 @@ a {
   color: hsl(228, 45%, 44%); 
 }
 
-/* 774px / 16 = 48.375em */
+/* media queries for responsive display */
 
-@media (max-width: 48.375em) {
+/* 1000px / 16 = 62.5em */
+
+@media (max-width: 62.5em) {
 
   .container {
-    width: 35rem;
-    height: 26rem;
+    width: 46rem;
+    height: 25rem;
   }
 
   .input-container {
-    width: 14rem;
+    width: 19rem;
+    margin: 2.2rem;
   }
 
   .output-container {
-    width: 16rem;
+    width: 21rem;
+    margin: 1.6rem 1.6rem 1.6rem 0;
   }
 
   .form-control {
-    width: 14rem;
+    width: 19rem;
+    height: 2rem;
   }
 
-  .reset-btn {
-    width: 12rem;
-  }
-
-}
-
-/* 644px / 16 = 40.25em */
-
-@media (max-width: 40.25em) {
-
-  .container {
-    width: 27rem;
-    height: 26rem;
-  }
-
-  .input-container {
-    width: 10.4rem;
-    margin: 2rem 0.2rem;
-  }
-
-  .output-container {
-    width: 13.5rem;
-    margin: 1.4rem 0.6rem 1.4rem 0;
-  }
-
-  .form-control {
-    width: 10.4rem;
+  .icon {
+    top: 0.6rem;  
   }
 
   .form-control-btn, .form-control-custom-btn {
-    width: 4.8rem;
-  }
-
-  .amount-output-section {
-    padding: 2.5rem 1rem 0 1rem;
+    width: 5.6rem;
+    height: 2.4rem;
+    font-size: 18px;
   }
 
   .output-amount {
-    font-size: 30px;
+    font-size: 36px;
+    line-height: 2.5rem;
+  }
+
+  .amount-output-section {
+    padding: 2.5rem 2rem 0 2rem;
   }
 
   .reset-btn {
-    width: 11.5rem;
-    margin: 5.5rem 1rem 0 1rem; 
+    width: 17rem;
+    height: 2.4rem;
+    margin: 5.5rem 2rem 0 2rem; 
+  }
+
+} 
+
+
+/* 760px / 16 = 47.5em */
+
+@media (max-width: 47.5em) {
+
+  .logo {
+    margin-top: 4rem;
+  }
+
+  .container {
+    width: 32rem;
+    height: 57rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 25px;
+  }
+
+  .input-container {
+    width: 26rem;
+    margin: 2rem 3rem 0 3rem;
+  }
+
+  .output-container {
+    width: 27rem;
+    margin: 0 2.5rem;
+    border-radius: 15px;
+  }
+
+  .form-control {
+    width: 26rem;
+    height: 3.2rem;
+  }
+
+  .icon {
+    top: 1.2rem;
+  }
+
+  .form-control-btn, .form-control-custom-btn {
+    width: 12rem;
+    height: 4rem;
+    font-size: 28px;
+  }
+
+  .amount-output-section {
+    padding: 2.5rem 2rem 0 2rem;
+  }
+
+  .output-amount {
+    font-size: 38px;
+    line-height: 3.5rem;
+  }
+
+  .reset-btn {
+    width: 23rem;
+    height: 3.5rem;
+    margin: 3rem 2rem 2rem 2rem; 
+    font-size: 24px;
   }
 
 }
+
 
 /* 480px / 16 = 30em */
 
@@ -296,17 +353,9 @@ a {
     font-size: 16px;
   }
 
-  .logo {
-    margin-top: 4rem;
-  }
-
   .container {
     width: 23.78rem;
-    height: 51rem;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 3rem auto;
-    border-radius: 25px;
+    height: 52rem;
   }
 
   .input-container {
@@ -339,7 +388,8 @@ a {
   }
 
   .output-amount {
-    font-size: 30px;
+    font-size: 34px;
+    line-height: 3rem;
   }
 
   .reset-btn {
